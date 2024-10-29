@@ -210,6 +210,7 @@ async function calculate() {
                     itemsToInsert += `<div class='itemCard disabledCard' id='${itemKey}'>
                     <div class='tooltip'>Hint<div class='tooltipText'>${itemsData[region][zone][itemKey].hint}</div></div>
                     <img alt="${itemsData[region][zone][itemKey].type}" src="assets/img/hints/${itemsData[region][zone][itemKey].type}.png"/>
+                    <a target="_blank" href='https://eldenring.wiki.fextralife.com/${sanitizeURL(itemInfos.name)}'>
                     <p>??????????</p>
                     <input type="hidden" value="${itemsData[region][zone][itemKey].name}"/>
                     <input type="hidden" value="${itemsData[region][zone][itemKey].type}"/>
