@@ -467,13 +467,10 @@ function collectionPage(pageNumber) {
                 row.innerHTML += elt;
             }
             else {
-                const elt = `<div class='itemCard disabledCard'>
-                    <div class='tooltip'>Hint<div class='tooltipText'>${itemInfos.hint}</div></div>
-                    <img alt="${itemInfos.type}" src="assets/img/hints/${itemInfos.type}.png"/>
-                    <p>??????????</p>
-                    <input type="hidden" value="${itemInfos.name}"/>
-                    <input type="hidden" value="${itemInfos.type}"/>
-                    </div>`;
+                const elt = `<div class='itemCard'><a target="_blank" href='https://eldenring.wiki.fextralife.com/${sanitizeURL(itemInfos.name)}'>
+                <img alt="${itemInfos.name}" src="assets/img/items/${sanitizeImgName(itemInfos.name)}.webp"/>
+                <p>${itemInfos.name}</p>
+                </a></div>`;
                 row.innerHTML += elt;
             }
         });
